@@ -1,0 +1,290 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../styles.css" type="text/css" media="screen">
+
+
+<title>Showtime</title>
+
+<script type="text/javascript" src="../../js/prototype.js" charset="UTF-8"></script>        
+<script type="text/javascript" src="../../js/framework.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/utils.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/page/dex_cast_nav-noscroll.js" charset="UTF-8"></script>
+
+</head>
+
+<body id="dexter" onLoad="initialize()">
+<script type="text/javascript">document.body.style.overflow = 'hidden';</script>
+
+<img id="exit" onClick="handleExitButtonClick();" style="position:absolute;top:0;left:0;" src="../../images/exit_deselected.png" name="exit_panel" />
+        <script>
+            function giveExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/exit_selected.png";
+            }
+
+            function removeExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/exit_deselected.png";
+            }
+            
+            registerNavHandlers(exit, giveExitNavObjectFocusHandler, removeExitNavObjectFocusHandler);
+        </script>
+
+<div id="header">
+
+<img id="series_logo" src="../../images/VideoExtras/dexter_logo.png" onClick = "window.location = '../../index.html'">
+
+<img id="back_btn" src="../../images/VideoExtras/back_btn_up.png" onClick="history.back()">
+
+	<script>
+            function giveBackNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/VideoExtras/back_btn_over.png";
+            }
+
+            function removeBackNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/VideoExtras/back_btn_up.png";
+            }
+            
+            registerNavHandlers(back_btn, giveBackNavObjectFocusHandler, removeBackNavObjectFocusHandler);
+     </script>
+     
+     
+<img id="logo" class="logo" src="../../images/sho_logo_up.png">
+	<script>
+            function giveExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/sho_logo_over.png";
+            }
+
+            function removeExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "../../images/sho_logo_up.png";
+            }
+            
+            registerNavHandlers(logo, giveExitNavObjectFocusHandler, removeExitNavObjectFocusHandler);
+        </script>
+
+<div id="topNav">
+
+		<ul>
+    		<li id="link1" class="deselected" onClick = "window.location = '../../overview_dex.html'">
+            Overview
+            </li>
+    		
+            <li id="link2" class="deselected">
+            Episodes
+            </li>
+    		
+            
+            <li id="link3" class="deselected" onClick = "window.location = '../../video_extras_dex.html'">
+            Video Extras
+            </li>
+    		
+            <li id="link4" class="active" onClick = "window.location = '../../cast_dex.html'">
+            Cast
+			</li>
+    		
+            <li id="link5" class="deselected">
+            Photos
+            </li>
+    		
+            <li id="link6" class="deselected">
+            Special Features
+            </li>
+    		
+            <li id="link7" class="deselected" onClick = "window.location = '../../video_extras_dex.html'">
+            Other Seasons
+            </li>
+            
+
+    	</ul>
+           
+         
+		 <script> 
+						
+						
+                        function giveNavObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "selected";
+			
+                        }
+    
+                        function removeNavObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "deselected";
+							menuItems[4].className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(link1, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link2, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link3, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link4, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link5, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link6, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+						registerNavHandlers(link7, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link8, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+       </script>
+       
+                    
+	</div>
+
+</div>
+
+
+	<div id="sub_menu">
+    	<ul>
+        <li id="sub_1" class="deselected" onClick = "window.location = 'actor_bio.html'"><p>Actor Bio</p></li>
+        <li id="sub_2" class="deselected" onClick = "window.location = 'character_bio.html'"><p>Character Bio</p></li>
+        <li id="sub_3" class="active" onClick = "window.location = 'filmography.html'"><p>Filmography</p></li>
+        <li id="sub_4" class="deselected" onClick = "window.location = 'awards.html'"><p>Awards</p></li>
+        
+        <script> 
+						
+						
+                        function giveSubObjectFocusHandler(event)
+                        {
+							var navObject = event.element(); 
+                 
+							navObject.className = "selected";
+			
+                        }
+    
+                        function removeSubObjectFocusHandler(event)
+                        {
+                           
+							var navObject = event.element(); 
+                            navObject.className = "deselected";
+							sub_3.className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(sub_1, giveSubObjectFocusHandler, removeSubObjectFocusHandler);
+                        registerNavHandlers(sub_2, giveSubObjectFocusHandler, removeSubObjectFocusHandler);
+                        registerNavHandlers(sub_3, giveSubObjectFocusHandler, removeSubObjectFocusHandler);
+                        registerNavHandlers(sub_4, giveSubObjectFocusHandler, removeSubObjectFocusHandler);
+                       
+       </script>
+    
+    
+    </div>
+
+	
+    
+    
+    
+    
+    
+    <div id="center_col">
+    	
+        
+        <div id="text">
+        
+   <table width="500" border="0" cellpadding="5">
+  <tr><td colspan=2><h1 style="margin-bottom:5px;">Michael C. Hall</h1></td></tr>
+  <tr>
+    <td width="60"><b>2006</b></td>
+    <td>Dexter</td>
+  </tr>
+  <tr>
+    <td><b>2009</b></td>
+    <td>Gamer (Ken Castle)</td>
+  </tr>
+  <tr>
+    <td><b>2006</b></td>
+    <td>Mysteries of the Freemasons (Narrator)</td>
+  </tr>
+  <tr>
+    <td><b>2001</b></td>
+    <td>Six Feet Under (David Fisher)</td>
+  </tr>
+  <tr>
+    <td><b>2004</b></td>
+    <td>Bereft (Jonathan)</td>
+  </tr>
+  <tr>
+    <td><b>2003</b></td>
+    <td>Paycheck (Agent Klein)</td>
+  </tr>
+</table>
+
+        
+        </div>
+        
+        <script>
+                        
+			function giveContentNavObjectFocusHandler(event)
+            {
+            var navObject = event.element(); 
+                            
+            }
+    
+            function removeContentNavObjectFocusHandler(event)
+            {
+            var navObject = event.element(); 
+            }
+         
+         </script> 
+
+    
+    <div id="cast_right">
+   		<img src="../../images/Cast/dexter_lrg4.png">
+        
+        
+        <div id="cast_video_menu">
+        	
+         <!--<h2>Videos</h2>
+            
+            <ul>
+        
+       
+        
+        <div id="cast_menu_box">
+        
+        <li id="vid_1" class="deselected"><img src="../../images/Cast/dex_vid2.png"><p><b>Hangin' With <br>Michael C. Hall</b></p></li>
+        <li id="vid_2" class="deselected"><img src="../../images/Cast/dex_vid1.png"><p><b>Richer Soil : <br>Michael C. Hall</b></p></li>
+        <li id="vid_3" class="deselected"><img src="../../images/Cast/dex_vid3.png"><p><b>Interview with <br>Michael C. Hall</b></p></li        
+        ></div>
+        
+       
+        
+		<script>
+                        function giveVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "selected";
+                        }
+    
+                        function removeVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "deselected";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(vid_1, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_2, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_3, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						
+  
+       </script>
+        </ul>
+        </div>-->
+      </div>
+
+</body>
+</html>

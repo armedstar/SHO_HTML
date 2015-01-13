@@ -1,0 +1,238 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+
+
+<title>Showtime</title>
+
+<script type="text/javascript" src="js/prototype.js" charset="UTF-8"></script>        
+<script type="text/javascript" src="js/framework.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/utils.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/page/vid_extras_nav.js" charset="UTF-8"></script>
+
+</head>
+
+<body id="dexter" onLoad="initialize()">
+<script type="text/javascript">document.body.style.overflow = 'hidden';</script>
+
+<img id="exit" onClick="handleExitButtonClick();" style="position:absolute;top:0;left:0;" src="images/exit_deselected.png" name="exit_panel" />
+        <script>
+            function giveExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/exit_selected.png";
+            }
+
+            function removeExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/exit_deselected.png";
+            }
+            
+            registerNavHandlers(exit, giveExitNavObjectFocusHandler, removeExitNavObjectFocusHandler);
+        </script>
+
+<div id="header">
+
+<img id="series_logo" src="images/VideoExtras/dexter_logo.png">
+
+<img id="back_btn" src="images/VideoExtras/back_btn_up.png" onClick="history.back()">
+
+	<script>
+            function giveBackNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/VideoExtras/back_btn_over.png";
+            }
+
+            function removeBackNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/VideoExtras/back_btn_up.png";
+            }
+            
+            registerNavHandlers(back_btn, giveBackNavObjectFocusHandler, removeBackNavObjectFocusHandler);
+     </script>
+
+<img id="logo" class="logo" src="images/sho_logo_up.png" onClick = "window.location = 'index.html'">
+
+	<script>
+            function giveLogoNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/sho_logo_over.png";
+            }
+
+            function removeLogoNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/sho_logo_up.png";
+            }
+            
+            registerNavHandlers(logo, giveLogoNavObjectFocusHandler, removeLogoNavObjectFocusHandler);
+        </script>
+
+	<div id="topNav">
+<ul>
+    		<li id="link1" class="deselected" onClick = "window.location = 'overview_dex.html'">
+            Overview
+            </li>
+    		
+            <li id="link2" class="deselected">
+            Episodes
+            </li>
+    		
+            
+            <li id="link3" class="active" onClick = "window.location = 'video_extras_dex.html'">
+            Video Extras
+            </li>
+    		
+            <li id="link4" class="deselected" onClick = "window.location = 'cast_dex.html'">
+            Cast
+			</li>
+    		
+            <li id="link5" class="deselected">
+            Photos
+            </li>
+    		
+            <li id="link6" class="deselected">
+            Special Features
+            </li>
+    		
+            <li id="link7" class="deselected" onClick = "window.location = 'video_extras_dex.html'">
+            Other Seasons
+            </li>
+    		
+            
+    	</ul>
+           
+           
+         
+		 <script> 
+						
+						
+                        function giveNavObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "selected";
+			
+                        }
+    
+                        function removeNavObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "deselected";
+							menuItems[3].className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(link1, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link2, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link3, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link4, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link5, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link6, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+						registerNavHandlers(link7, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link8, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+       </script>
+       
+                    
+	</div>
+
+</div>
+
+	
+    <div id="movie_container">
+    	
+        <div id="mov">
+        
+        <embed src="video/323_4_0_int02.mp4" width="797" height="447" ShowControls="0" autostart="true" ShowStatusBar="0" ShowDisplay="0" Loop="true"></embed><p><b>Drop of Blood </b>Clyde Phillips</p>   
+        
+        
+        </div>
+    	
+        <img id="fullscreen" src="images/VideoExtras/fs_btn_up.png">
+            
+            <script>
+            function giveFsNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/VideoExtras/fs_btn_over.png";
+            }
+
+            function removeFsNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/VideoExtras/fs_btn_up.png";
+            }
+            
+            registerNavHandlers(fullscreen, giveFsNavObjectFocusHandler, removeFsNavObjectFocusHandler);
+     </script>
+    	
+        <div id="right_scroll_menu_dex">
+    	
+        	<div id="r_menu">
+        	<ul>
+        	<li id="video_up" class="deselected" style="opacity:.2;" onClick="videoScrollUp();"></li>
+        
+        	<div id="menu_box">
+        	<li id="vid_1" class="deselected" onClick ="vidMenuClick();"><p><b>Drop of Blood</b><br>Clyde Phillips</p></li>
+        	<li id="vid_2" class="deselected" onClick ="vidMenuClick();"><p><b>Dexter</b><br>Early Cuts</p></li>
+        	<li id="vid_3" class="deselected" onClick ="vidMenuClick();"><p><b>FBI Profiler</b><br>on Dexter</p></li>
+        	<li id="vid_4" class="deselected" onClick ="vidMenuClick();"><p><b>John Lithgow:</b><br> Video Chat</p></li>
+        	<li id="vid_5" class="deselected" onClick ="vidMenuClick();"><p><b>Richer Soil</b><br>Michael C. Hall</p></li>
+        	<li id="vid_6" class="deselected" onClick ="vidMenuClick();"><p><b>Raising the Bar:</b><br>Jennifer Carpenter</p></li>
+            <li id="vid_7" class="deselected" onClick ="vidMenuClick();"><p><b>Scoring Dexter</b></p></li>
+            <li id="vid_8" class="deselected" onClick ="vidMenuClick();"><p><b>Dissecting Dexter</b></p></li>
+            <li id="vid_9" class="deselected" onClick ="vidMenuClick();"><p><b>Dexter the Game</b><br>Lands at Comic-Con</p></li>
+            <li id="vid_10" class="deselected" onClick ="vidMenuClick();"><p><b>Clyde Phillips:</b><br>Challenged</p></li>
+            <li id="vid_11" class="deselected" onClick ="vidMenuClick();"><p><b>Momentum:</b><br>David Zayas</p></li>
+            <li id="vid_12" class="deselected" onClick ="vidMenuClick();"><p><b>Being Watched:</b><br>Lauren Valez</p></li>
+        	</div>
+        
+        	<li id="video_down" class="deselected" onClick ="videoScrollDown();"></li> 
+        
+			<script>
+                        function giveVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "selected";
+                        }
+    
+                        function removeVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "deselected";
+							videoItems[clickedIndex].className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(video_up, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(video_down, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						
+						registerNavHandlers(vid_1, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_2, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_3, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_4, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_5, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_6, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						registerNavHandlers(vid_7, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_8, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						registerNavHandlers(vid_9, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						registerNavHandlers(vid_10, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_11, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						registerNavHandlers(vid_12, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+       	</script>
+        </ul>
+        </div>
+       </div>
+        
+    </div>
+
+
+
+</body>
+</html>

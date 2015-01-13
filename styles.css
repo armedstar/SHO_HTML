@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{margin:0;padding:0;background:#e2e1e1 url(images/background.png) no-repeat;font-family:Helvetica, Arial, sans-serif;color:rgb(60,60,60)}
+body#dexter{background:#e2e1e1 url(images/background.png) no-repeat !important;}
+
+
+ul{list-style:none;}
+
+h1{font-size:23px;}
+h2{color:rgb(60,60,60); font-size:18px; margin:20px 0 5px 0;}
+
+#back_btn{position:absolute; top:26px; left:46px;}
+
+span{}
+
+/* Top Navigation */
+
+#header{margin-top:30px;}
+.logo{position:absolute;left:1050;}
+
+#topNav{background:url(images/menu_bar.png) repeat-x; width:100%;height:45px;clear:both; letter-spacing: -1px; font-stretch:condensed;position:absolute;top:100;}
+#topNav ul{list-style:none;margin-left:80px;padding:5px 0;margin-top:0;}
+/*#topNav ul li{float:left;padding:10px;}*/
+
+#topNav ul li{float:left;padding:5px 15px; margin:-1px 0 0 0;height:50px;font-weight:bold;font-size:25px;}
+
+
+li.selected{background:url(images/main_nav_selected.png) repeat-x;color:rgb(235,235,235)}
+	/*li.selected p#grey{display:none;}
+	li.selected p#white{dipslay:block;}*/
+
+li.deselected{background:none;}
+	/*li.deselected p#grey{display:block;}
+	li.deselected p#white{visibility:hidden;}*/
+	
+li.active{background:url(images/main_nav_deselected.png) repeat-x;}
+	/*li.active p#grey{display:block;}
+	li.active p#white{visibility:hidden;}*/
+	
+#loading{background:url(images/loading_back.png) no-repeat; width:520px; height:143px; margin:250px auto; padding:20px;}
+#loading h1{margin:10px 0;padding:0;width:500px;text-align:center;}
+#loading p{clear:both;width:500px;height:100px;text-align:center;}
+#loading img{}
+
+
+/* --------- HOME PAGE ----------- */
+
+/* Barker Box */
+
+#barker .Show{display:block;}
+#barker .Hide{display:none;}
+
+#barker {position:absolute; top:8px; left:8px; width:705px;height:505px;display:block;z-index:9999;}
+#barker ul{margin:0;padding:0;}
+#barker li{width:705px;height:605px;background:url(images/barker_deselected.png) no-repeat;}
+#barkerBox img{margin:16px 0 0 9px;}
+#barkerBox {font-size:23px;}
+#barkerBox p{margin-left:20px;}
+
+#barker_container{background:url(images/barker_back_plate.png); width:1006px; height:519px;position:absolute; top:160px; left:225px;}
+
+object, embed{margin-left:9px;margin-top:16px;background:transparent;}
+
+/* Left Promo Menu */
+
+#left_promos{position:absolute; top:143; left:10;}
+#left_promos li{width:176;height:171;background:url(images/sm_deselected_home.png) no-repeat;display:block;padding:0 0 2px 0;}
+#left_promos li p{font-family:Helvetica; font-weight:bold; font-size:17px;width:163px; height:27px; margin:4px 0 0 9px; padding:0;line-height:17px;}
+#left_promos img{margin:7px 0 0 9px;}
+
+/* Right Video Menu */
+
+#right_scroll_menu{width:277px; height:520px; position:absolute; top:18px;left:715px;/*border:1px #bfc0c0 solid;*/}
+
+#r_menu li{width:277px;height:73px;padding:0;margin:0;font-family:Helvetica;font-size:22px;line-height:22px;}
+
+#r_menu li.deselected{background:url(images/r_menu_btn_deselected.png) no-repeat;}
+#r_menu li.selected{background:url(images/r_menu_btn_selected.png) no-repeat;color:rgb(235,235,235);}
+#r_menu li.active{background:url(images/r_menu_btn.png) no-repeat;margin-left:-2px;}
+#r_menu ul{margin:0;padding:0;}
+
+#r_menu li p{margin:0 0 0 10px;padding-top:10px;}
+
+#menu_box{height:520px; overflow:hidden;}
+
+li#home_vid_up.deselected{height:31 !important;margin-left:2px; width:290px; background:url(images/menu_arrow_up.png) no-repeat !important;opacity:.2;}
+li#home_vid_up.selected{height:31 !important;background:url(images/menu_arrow_up_selected.png) no-repeat !important;}
+
+li#home_vid_down.deselected{height:31 !important;margin-left:2px;background:url(images/menu_arrow_down.png) no-repeat !important;opacity:.2;}
+li#home_vid_down.selected{height:31 !important;background:url(images/menu_arrow_down_selected.png) no-repeat !important;}
+
+
+/* --------- VIDEO EXTRAS PAGE ----------- */
+
+#series_logo{position:absolute; left:117px; top:35px;}
+
+#movie_container{width:1120;height:530; position:absolute; top: 150px; left:77px; background: url(images/VideoExtras/mov_container.png) no-repeat;}
+
+#right_scroll_menu_dex{width:275px; height:480px; position:absolute; top:16;left:826px;}
+#right_scroll_menu_dex #menu_box{height:440px; overflow:hidden;}
+#mov img{margin:15px 0 0 9px;}
+#mov p{font-family:helvetica, sans-serif; color:rgb(60,60,60);font-size:23px;margin: 15px 0 0 15px;}
+
+#fullscreen{position:absolute; top:480px; left:693px;}
+
+li#video_up.deselected{margin-left:2px;height:31 !important;background:url(images/menu_arrow_up.png) no-repeat !important;}
+li#video_up.selected{margin-left:2px;height:31 !important;background:url(images/menu_arrow_up_selected.png) no-repeat !important;}
+
+li#video_down.deselected{margin-left:2px;height:31 !important;background:url(images/menu_arrow_down.png) no-repeat;}
+li#video_down.selected{margin-left:2px;height:31 !important;background:url(images/menu_arrow_down_selected.png) no-repeat;}
+
+/* ---------- OVERVIEW PAGE ---------- */
+
+#sub_menu{width:230px; position:absolute; left:15px; top:150px;font-family:Helvetica, sans-serif;font-weight:bold;font-size:20px;}
+#sub_menu li{width:230px; height:40px;}
+#sub_menu li p{margin:0;padding:10px 0 0 15px;}
+
+#sub_menu li.deselected{background:url(images/Cast/sub_btn_deselected.png) no-repeat;}
+#sub_menu li.selected{background:url(images/Cast/sub_btn_selected.png) no-repeat;}
+#sub_menu li.active{background:url(images/Cast/sub_btn_active.png) no-repeat;}
+
+#center_col{position:absolute; left:310px; top:150px;width:580px;}
+
+#text, #text table{font-size:19px;line-height:25px;}
+
+#ep_promo{width:540px; height:106px;margin-bottom:20px;}
+#ep_promo img{padding:20px 20px 0 20px;float:left;}
+#ep_promo p{font-family:Helvetica; font-weight:bold; font-size:19px; padding:20px;}
+
+
+#ep_promo.deselected{background:url(images/Cast/ov_promo_deselected.png) no-repeat;color:rgb(60,60,60);}
+#ep_promo.selected{background:url(images/Cast/ov_promo_selected.png) no-repeat;color:rgb(235,235,235);}
+
+#new{position:absolute; margin-left:450px; top:225px;}
+
+#bottom_promos{width:550px; height:171px;}
+#bottom_promos ul{margin:0;padding:0;}
+#bottom_promos li{width:177;height:170;display:inline;float:left;padding:0 2px;}
+#bottom_promos li p{font-family:Helvetica; font-weight:bold; font-size:17px;width:163px; height:27px; margin:4px 0 0 9px; padding:0;line-height:17px;}
+#bottom_promos li img{margin:7px 0 0 6px;}
+
+#bottom_promos li.deselected{background:url(images/sm_deselected_home.png) no-repeat;color:rgb(60,60,60);}
+#bottom_promos li.selected{background:url(images/sm_selected_home.png) no-repeat;color:rgb(235,235,235);}
+
+#ov_cast_img{position:absolute;top:155px;left:850px;}
+
+
+/*---------- CAST PAGE ------------------*/
+
+#cast_scroll_menu_dex{position:absolute;top:163px; left:20px;}
+#c_menu{font-family:Helvetica, sans-serif;font-size:23px;}
+#c_menu li{width:561px; height:74px;}
+#c_menu li p{margin:0;padding:12px 0 0 10px;width:450px;height:80px;}
+#c_menu li img{float:left;padding:8px 10px 0 10px;}
+#c_menu li.deselected{background:url(images/Cast/cast_btn_deselected.png) no-repeat;color:rgb(60,60,60);}
+#c_menu li.selected{background:url(images/Cast/cast_btn_selected.png) no-repeat;color:rgb(235,235,235);}
+
+#c_menu #menu_box{width:564px;height:370px;overflow:hidden;}
+
+#cast_img{position:absolute;top:183px;left:635px;}
+
+#cast_up{margin-left:-1px !important;width:564px !important;height:27px !important;}
+#cast_up.deselected{background:url(images/Cast/cast_up_btn.png) no-repeat !important;}
+#cast_up.selected{background:url(images/Cast/cast_up_btn_selected.png) no-repeat !important;}
+
+#cast_down{margin-left:-1px !important;width:564px !important;height:27px !important;}
+#cast_down.deselected{background:url(images/Cast/cast_dwn_btn.png) no-repeat !important;}
+#cast_down.selected{background:url(images/Cast/cast_dwn_btn_selected.png) no-repeat !important;}
+
+/* -------- CAST INFO PAGES --------- */
+
+#cast_right{position:absolute; left:610px; top:10px;width:300px;}
+#cast_menu_box{height:165;width:300px;overflow:hidden;}
+
+#cast_video_menu{width:293px;font-family:Helvetica, sans-serif;}
+#cast_video_menu ul{margin:0;padding:0;}
+#cast_video_menu li{width:293px;height:55px;}
+#cast_video_menu li p{margin:0;height:55px;width:270px;display:table-cell;vertical-align:middle;padding-left:10px;font-size:18px;}
+#cast_video_menu li img{float:left;margin:5px 0 0 10px;}
+
+#cast_video_menu li.deselected{background:url(images/Cast/cast_vid_btn_deselected.png);}
+#cast_video_menu li.selected{background:url(images/Cast/cast_vid_btn_selected.png);}
+
+#vid_up.deselected{background:url(images/vid_menu_up_deselected.png) no-repeat !important;height:28px;}
+#vid_down.deselected{background:url(images/vid_menu_down_deselected.png) no-repeat !important;;height:28px;}
+
+#vid_up.selected{background:url(images/vid_menu_up_selected.png) no-repeat !important;height:28px;}
+#vid_down.selected{background:url(images/vid_menu_down_selected.png) no-repeat !important;;height:28px;}
+
+#scroll_text, #scroll_text table{font-size:19px;line-height:25px;height:442px; overflow:hidden;}
+
+#scroll_nav{width:92px;float:left;}
+#scroll_nav ul{margin:0; padding:0;}
+
+#scroll_nav li{width:39px; height:31px;margin:0; padding:0;float:left;}
+#scroll_up.deselected {background:url(images/Cast/scroll_up_deselected.png) no-repeat;}
+#scroll_up.selected {background:url(images/Cast/scroll_up_selected.png) no-repeat;}
+
+#scroll_down.deselected {background:url(images/Cast/scroll_dwn_deselected.png) no-repeat;}
+#scroll_down.selected {background:url(images/Cast/scroll_dwn_selected.png) no-repeat;}
+
+#page_count{position:absolute;top:610px;left:750px;color:525252;font-family:helvetica, sans-serif;font-size:13px;}
+
+
+
+
+

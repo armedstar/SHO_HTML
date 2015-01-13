@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+
+
+<title>Showtime</title>
+
+<script type="text/javascript" src="js/prototype.js" charset="UTF-8"></script>        
+<script type="text/javascript" src="js/framework.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/utils.js" charset="UTF-8"></script>
+
+<script type="text/javascript" src="js/page/index_nav.js" charset="UTF-8"></script>
+
+</head>
+
+<body>
+<script type="text/javascript">
+
+window.onload = function(){initialize();}
+
+document.body.style.overflow = 'hidden'; 
+</script>
+
+
+<img id="exit" onClick="handleExitButtonClick();" style="position:absolute;top:0;left:0;" src="images/exit_deselected.png" name="exit_panel" />
+        <script>
+            function giveExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/exit_selected.png";
+            }
+
+            function removeExitNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/exit_deselected.png";
+            }
+            
+            registerNavHandlers(exit, giveExitNavObjectFocusHandler, removeExitNavObjectFocusHandler);
+        </script>
+
+<div id="header">
+<img id="logo" class="logo" src="images/sho_logo_up.png">
+	<script>
+            function giveLogoNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/sho_logo_over.png";
+            }
+
+            function removeLogoNavObjectFocusHandler(event)
+            {
+                var navObject = event.element(); 
+                navObject.src = "images/sho_logo_up.png";
+            }
+            
+            registerNavHandlers(logo, giveLogoNavObjectFocusHandler, removeLogoNavObjectFocusHandler);
+        </script>
+<div id="topNav">
+
+		<ul>
+            <li id="link1" class="active" onClick = "window.location = 'index.html'">
+            What's Hot
+            </li>
+    		
+            <li id="link2" class="deselected" onClick = "window.location = 'overview_dex.html'">
+            Series
+            </li>
+    		
+            
+            <li id="link3" class="deselected">
+            Sports
+            </li>
+    		
+            <li id="link4" class="deselected">
+            Movies
+			</li>
+    		
+            <li id="link5" class="deselected">
+            Viewer Picks
+            </li>
+    		
+            <li id="link6" class="deselected">
+            Schedule
+            </li>
+    		
+            <li id="link7" class="deselected">
+            About
+            </li>
+    		
+            <li id="link8" class="deselected">
+            Coming Soon
+            </li>
+    	</ul>
+           
+         
+		<script> 
+						
+						
+                        function giveNavObjectFocusHandler(event)
+                        {
+							var navObject = event.element(); 
+                            navObject.className = "selected";
+			
+                        }
+    
+                        function removeNavObjectFocusHandler(event)
+                        {
+                           
+							var navObject = event.element(); 
+                            navObject.className = "deselected";
+							menuItems[1].className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(link1, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link2, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link3, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link4, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link5, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link6, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+						registerNavHandlers(link7, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+                        registerNavHandlers(link8, giveNavObjectFocusHandler, removeNavObjectFocusHandler);
+       </script>
+       
+                    
+	</div>
+
+</div>
+
+	<div id="left_promos">
+    	<ul>
+        	<li id="promo1" onClick = "window.location = 'overview_dex.html'"><img src="images/HomePromos/dexter_promo.png"><p>Dexter Series Overview</p></li>
+            <li id="promo2"><img src="images/HomePromos/tara_promo.png"><p>United States of Tara Extras</p></li>
+            <li id="promo3" onClick ="window.location = 'video/654_2_135570_eps01.mp4'"><img src="images/HomePromos/nursejackie_promo.jpg"><p>Nurse Jackie: Free Sample Episode</p></li>
+            
+             <script>
+            function givePromoObjectFocusHandler(event)
+            {
+                var navObject = event.element();
+				navObject.style.background = "url(images/sm_selected_home.png) no-repeat";
+				navObject.style.color = "rgb(235,235,235)";
+             }
+            
+                function removePromoObjectFocusHandler(event)
+             {
+                var navObject = event.element(); 
+                navObject.style.background = "url(images/sm_deselected_home.png) no-repeat";
+				navObject.style.color = "rgb(60,60,60)";
+             }
+                                
+             registerNavHandlers(promo1, givePromoObjectFocusHandler, removePromoObjectFocusHandler);
+             registerNavHandlers(promo2, givePromoObjectFocusHandler, removePromoObjectFocusHandler);
+			 registerNavHandlers(promo3, givePromoObjectFocusHandler, removePromoObjectFocusHandler);
+         </script>
+        
+        </ul>
+    </div>
+    
+    <div id="barker_container">
+    
+    <div id="barker">
+    	<ul>
+        <li id="barkerBox">
+        
+        <div id="barker_1" class="Show">
+        
+        <embed src="video/376_4_0_ori02.mp4" width="682" height="383" ShowControls="0" autostart="true" ShowStatusBar="0" ShowDisplay="0" Loop="true"></embed>
+
+<p><p><b>Tudors:</b><br>Final Season</p>
+</div></li>     
+        
+        
+        
+    
+		<script>
+            function giveBarkerObjectFocusHandler(event)
+            {
+                var navObject = event.element();
+				navObject.style.background = "url(images/barker_selected.png) no-repeat";
+				navObject.style.color = "rgb(235,235,235)";
+             }
+            
+                function removeBarkerObjectFocusHandler(event)
+             {
+                var navObject = event.element(); 
+                navObject.style.background = "url(images/barker_deselected.png) no-repeat";
+				navObject.style.color = "rgb(60,60,60)";
+             }
+                                
+             registerNavHandlers(barkerBox, giveBarkerObjectFocusHandler, removeBarkerObjectFocusHandler);
+			</script>
+        
+        </ul>
+    </div>
+    
+    <div id="right_scroll_menu">
+    	
+        <div id="r_menu">
+        <ul>
+        <li id="home_vid_up" class="deselected"></li>
+        
+        <div id="menu_box">
+        <li id="vid_1" class="deselected" onClick ="vidMenuClick();">
+        
+        <p><b>Tudors:</b><br> The Final Season</p></li>
+        
+        
+        <li id="vid_2" class="deselected" onClick ="vidMenuClick();">
+        
+        <p>Chat with <br><b>David Duchovny</b></p></li>
+        
+        
+        <li id="vid_3" class="deselected" onClick ="vidMenuClick();">
+        
+        <p><b>Valkyrie:</b> Go <br>Behind the Scenes</p></li>
+        
+        <li id="vid_4" class="deselected" onClick ="vidMenuClick();">
+        
+        <p><b>United States of Tara:</b> New Episodes</p></li>
+        <li id="vid_5" class="deselected" onClick ="vidMenuClick();">
+        
+        <p><b>Weeds Returns:</b> <br>Season 6 Preview</p></li>
+        
+        
+        <li id="vid_6" class="deselected" onClick ="vidMenuClick();">
+        
+        <p>All New Season <br>of <b>Californication</b></p></li>
+        
+        <li id="home_vid_down" class="deselected"></li>
+        </div>
+        
+        
+        
+		<script>
+                        function giveVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "selected";
+                        }
+    
+                        function removeVidObjectFocusHandler(event)
+                        {
+                            var navObject = event.element(); 
+                            navObject.className = "deselected";
+							videoItems[clickedIndex].className = "active";
+							
+                        
+                        }
+                        
+                        registerNavHandlers(vid_1, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_2, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_3, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_4, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_5, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_6, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+						registerNavHandlers(vid_7, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+                        registerNavHandlers(vid_8, giveVidObjectFocusHandler, removeVidObjectFocusHandler);
+       </script>
+        </ul>
+        </div>
+        
+        </div>
+        
+    </div>
+
+
+
+</body>
+</html>
